@@ -1,0 +1,65 @@
+==2066== Memcheck, a memory error detector
+==2066== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==2066== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==2066== Command: /home/cbernosk/EECS_678/quash/quash/quash
+==2066== 
+==2533== 
+==2533== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==2533==    at 0x4E6C765: raise (in /usr/lib64/libc-2.23.so)
+==2533==    by 0x4E6E369: abort (in /usr/lib64/libc-2.23.so)
+==2533==    by 0x4E64F96: __assert_fail_base (in /usr/lib64/libc-2.23.so)
+==2533==    by 0x4E65041: __assert_fail (in /usr/lib64/libc-2.23.so)
+==2533==    by 0x4029EB: is_empty_Jobs (in /home/cbernosk/EECS_678/quash/quash/quash)
+==2533==    by 0x404194: run_jobs (execute.c:279)
+==2533==    by 0x4042B4: child_run_command (execute.c:333)
+==2533==    by 0x404519: create_process (execute.c:452)
+==2533==    by 0x4046F8: run_script (execute.c:496)
+==2533==    by 0x40152D: main (quash.c:132)
+==2533== 
+==2533== HEAP SUMMARY:
+==2533==     in use at exit: 17,730 bytes in 5 blocks
+==2533==   total heap usage: 15 allocs, 10 frees, 1,069,253 bytes allocated
+==2533== 
+==2533== LEAK SUMMARY:
+==2533==    definitely lost: 0 bytes in 0 blocks
+==2533==    indirectly lost: 0 bytes in 0 blocks
+==2533==      possibly lost: 0 bytes in 0 blocks
+==2533==    still reachable: 17,730 bytes in 5 blocks
+==2533==         suppressed: 0 bytes in 0 blocks
+==2533== Reachable blocks (those to which a pointer was found) are not shown.
+==2533== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2533== 
+==2533== For counts of detected and suppressed errors, rerun with: -v
+==2533== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2066== Conditional jump or move depends on uninitialised value(s)
+==2066==    at 0x401AFB: is_empty_Pids (execute.c:31)
+==2066==    by 0x4047A6: run_script (execute.c:506)
+==2066==    by 0x40152D: main (quash.c:132)
+==2066==  Uninitialised value was created by a stack allocation
+==2066==    at 0x404620: run_script (execute.c:481)
+==2066== 
+==2066== 
+==2066== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==2066==    at 0x4E6C765: raise (in /usr/lib64/libc-2.23.so)
+==2066==    by 0x4E6E369: abort (in /usr/lib64/libc-2.23.so)
+==2066==    by 0x4E64F96: __assert_fail_base (in /usr/lib64/libc-2.23.so)
+==2066==    by 0x4E65041: __assert_fail (in /usr/lib64/libc-2.23.so)
+==2066==    by 0x401B15: is_empty_Pids (execute.c:31)
+==2066==    by 0x4047A6: run_script (execute.c:506)
+==2066==    by 0x40152D: main (quash.c:132)
+==2066== 
+==2066== HEAP SUMMARY:
+==2066==     in use at exit: 17,730 bytes in 5 blocks
+==2066==   total heap usage: 15 allocs, 10 frees, 1,069,253 bytes allocated
+==2066== 
+==2066== LEAK SUMMARY:
+==2066==    definitely lost: 0 bytes in 0 blocks
+==2066==    indirectly lost: 0 bytes in 0 blocks
+==2066==      possibly lost: 0 bytes in 0 blocks
+==2066==    still reachable: 17,730 bytes in 5 blocks
+==2066==         suppressed: 0 bytes in 0 blocks
+==2066== Reachable blocks (those to which a pointer was found) are not shown.
+==2066== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2066== 
+==2066== For counts of detected and suppressed errors, rerun with: -v
+==2066== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

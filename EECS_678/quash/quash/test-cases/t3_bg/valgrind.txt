@@ -1,0 +1,46 @@
+==2034== Memcheck, a memory error detector
+==2034== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==2034== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==2034== Command: /home/cbernosk/EECS_678/quash/quash/quash
+==2034== 
+==2531== 
+==2531== HEAP SUMMARY:
+==2531==     in use at exit: 0 bytes in 0 blocks
+==2531==   total heap usage: 17 allocs, 17 frees, 2,120,098 bytes allocated
+==2531== 
+==2531== All heap blocks were freed -- no leaks are possible
+==2531== 
+==2531== For counts of detected and suppressed errors, rerun with: -v
+==2531== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2034== Conditional jump or move depends on uninitialised value(s)
+==2034==    at 0x401AFB: is_empty_Pids (execute.c:31)
+==2034==    by 0x4047A6: run_script (execute.c:506)
+==2034==    by 0x40152D: main (quash.c:132)
+==2034==  Uninitialised value was created by a stack allocation
+==2034==    at 0x404620: run_script (execute.c:481)
+==2034== 
+==2034== 
+==2034== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==2034==    at 0x4E6C765: raise (in /usr/lib64/libc-2.23.so)
+==2034==    by 0x4E6E369: abort (in /usr/lib64/libc-2.23.so)
+==2034==    by 0x4E64F96: __assert_fail_base (in /usr/lib64/libc-2.23.so)
+==2034==    by 0x4E65041: __assert_fail (in /usr/lib64/libc-2.23.so)
+==2034==    by 0x401B15: is_empty_Pids (execute.c:31)
+==2034==    by 0x4047A6: run_script (execute.c:506)
+==2034==    by 0x40152D: main (quash.c:132)
+==2034== 
+==2034== HEAP SUMMARY:
+==2034==     in use at exit: 17,730 bytes in 5 blocks
+==2034==   total heap usage: 25 allocs, 20 frees, 1,075,573 bytes allocated
+==2034== 
+==2034== LEAK SUMMARY:
+==2034==    definitely lost: 0 bytes in 0 blocks
+==2034==    indirectly lost: 0 bytes in 0 blocks
+==2034==      possibly lost: 0 bytes in 0 blocks
+==2034==    still reachable: 17,730 bytes in 5 blocks
+==2034==         suppressed: 0 bytes in 0 blocks
+==2034== Reachable blocks (those to which a pointer was found) are not shown.
+==2034== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2034== 
+==2034== For counts of detected and suppressed errors, rerun with: -v
+==2034== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

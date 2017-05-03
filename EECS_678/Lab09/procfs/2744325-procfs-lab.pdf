@@ -1,0 +1,8 @@
+1.) No. There is no gurantee that a deadlock has occured or not because 	it all depends on when the program is checked for a deadlock. If the 	 program is in the system mode and the deadlock occurs in the user 
+	mode then the deadlock can be looked over and vice versa. This deadlock will be caught on the next iteration.
+
+2.) The only thing that would allow us to ensure this would be to let 
+	the program acheive the maximum wait cycle because this is the absolute longest that one can be eating. If the program is still waiting at the end of this cycle then it is in deadlock.
+
+3.) It seemed like the higher the value the less likely it was for the 
+	program to reach deadlock. This higher the value the slower the entire process runs creating less havoc. The less time then the higher chance something goes wrong and deadlock occurs.
